@@ -1,0 +1,30 @@
+/*BEGIN
+    PRINT "Enter number: "
+    READ number
+    
+    IF number MOD 2 == 0 THEN
+        PRINT "Even number"
+    ELSE
+        PRINT "Odd number"
+    END IF
+END
+*/
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter number: ");
+        int number = scanner.nextInt();
+        
+        if (number % 2 == 0) {
+            System.out.println("Even number");
+        } else {
+            System.out.println("Odd number");
+        }
+        
+        scanner.close();
+    }
+}
