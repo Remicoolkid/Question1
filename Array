@@ -1,0 +1,39 @@
+/*BEGIN
+    DECLARE Array scores[5]
+    total_score = 0
+    
+    FOR i = 0 TO 4 DO
+        PRINT "Enter score " + (i + 1) + ": "
+        READ scores[i]
+        total_score = total_score + scores[i]
+    END FOR
+    
+    average_score = total_score / 5.0
+    
+    PRINT "Total score = " + total_score
+    PRINT "Average score = " + average_score
+END
+*/
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int[] scores = new int[5];
+        int totalScore = 0;
+        
+        for (int i = 0; i < 5; i++) {
+            System.out.print("Enter score " + (i + 1) + ": ");
+            scores[i] = scanner.nextInt();
+            totalScore += scores[i]; 
+        }
+        
+        double averageScore = (double) totalScore / 5;
+        
+        System.out.println("Total score = " + totalScore);
+        System.out.println("Average score = " + averageScore);
+        
+        scanner.close();
+    }
+}
