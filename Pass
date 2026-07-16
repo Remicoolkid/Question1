@@ -1,0 +1,42 @@
+/*
+BEGIN
+    PRINT "Enter midterm score: "
+    READ midterm_score
+    
+    PRINT "Enter final score: "
+    READ final_score
+    
+    total_score = midterm_score + final_score
+    PRINT "Total score = " + total_score
+    
+    IF total_score >= 50 THEN
+        PRINT "Pass"
+    ELSE
+        PRINT "Fail"
+    END IF
+END
+*/
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter midterm score: ");
+        int midtermScore = scanner.nextInt();
+        
+        System.out.print("Enter final score: ");
+        int finalScore = scanner.nextInt();
+        
+        int totalScore = midtermScore + finalScore;
+        System.out.println("Total score = " + totalScore);
+        
+        if (totalScore >= 50) {
+            System.out.println("Pass");
+        } else {
+            System.out.println("Fail");
+        }
+        
+        scanner.close();
+    }
+}
